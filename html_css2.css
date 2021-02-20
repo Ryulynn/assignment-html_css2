@@ -1,0 +1,1162 @@
+/*===================================
+common code
+=====================================*/
+
+body{
+  margin:0;
+  font-weight:400;
+  font-family:'Noto Sans JP' , sans-serif;
+}
+
+.section_title{
+  font-size:46px;
+  font-weight:900;
+}
+
+.section_title span{
+  font-size:50px;
+}
+
+.section_title::after{
+  content:'';
+  display:block;
+  border-bottom:solid 6px #f79314;
+  width:50px;
+  margin-top:20px;
+}
+
+@media screen and (max-width:767px){
+  .section_title{
+  font-size:26px;
+  font-weight:bold;
+  text-align:center;
+  line-height:1.2;
+}
+
+.section_title span{
+  font-size:30px;
+  letter-spacing:1px;
+  display:block;
+}
+}
+
+
+.content_width{
+  max-width:1140px;
+  padding-left:50px;
+  padding-right:50px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media screen and (max-width:767px){
+  .content_width{
+    padding-left:20px;
+    padding-right:20px;
+  }
+}
+
+ul{
+  list-style:none;
+}
+
+p, span, h1, h2, h3, h4, h5, h6{
+  margin:0;
+}
+
+p{
+  line-height:1.5;
+}
+
+
+
+/*===================================
+hover
+=====================================*/
+
+@media screen and (min-width:768px){
+.hover_opacity,
+.hover_opacity p ,
+.hover_opacity a ,
+.hover_opacity span{
+  transition:opacity 0.2s;
+}
+}
+
+@media screen and (min-width:768px){
+.hover_opacity:hover,
+.hover_opacity:hover p ,
+.hover_opacity:hover a ,
+.hover_opacity:hover span{
+  opacity:0.7;
+}
+}
+
+
+
+
+/*===================================
+header(common)
+=====================================*/
+
+header{
+  padding:20px 0;
+  background-color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  width:100%;
+  z-index: 10;
+}
+
+.header{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 50px;
+  max-width:1140px;
+  margin-left:auto;
+  margin-right:auto;
+  max-height:40px;
+}
+
+@media screen and (max-width:767px){
+  .header{
+    padding:0 20px;
+  }
+}
+
+.header_a1 img{
+  height:20px;
+  width:auto;
+}
+
+.hamburger_icon{
+  width:30px;
+  height:21px;
+  display:block;
+  position:relative;
+  cursor:pointer;
+}
+
+.header_link{
+  text-align:center;
+}
+
+.header_link_ul{
+  display:inline-flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.header_link_li_a{
+  text-decoration:none;
+}
+
+.header_link_li_p1{
+  font-size:14px;
+  font-weight:bold;
+  color:black;
+}
+
+.header_link_li_p2{
+  font-size:10px;
+  font-weight:bold;
+  color:black;
+}
+
+.header_link_li_course{
+  color:#f79314;
+}
+
+.header_link_div_counseling{
+  background-color:#f79314;
+  border-radius:30px;
+  height:40px;
+  width:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.header_link_li_counseling{
+  color:white;
+  font-size:12px;
+  display:block;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.header_link_ul > li + li{
+  margin-left:30px;
+}
+
+.header_link_ul li:last-child{
+  margin-left:20px;
+}
+
+/*画面幅767px以下の時、header_linkを非表示にする。*/
+@media screen and (max-width:1079px){
+  .header_link{
+    display:none;
+  }
+}
+
+/*画面幅768px以上の時、hamburger_iconを非表示にする。*/
+@media screen and (min-width:1079px){
+  .hamburger_icon{
+    display:none;
+  }
+}
+
+.hamburger1{
+  display:block;
+  width:100%;
+  height:3px;
+  position:absolute;
+  background-color:black;
+  top:0;
+  margin:0;
+}
+
+.hamburger2{
+  display:block;
+  width:100%;
+  height:3px;
+  position:absolute;
+  background-color:black;
+  top:50%;
+  margin:0;
+}
+
+.hamburger3{
+  display:block;
+  width:100%;
+  height:3px;
+  position:absolute;
+  background-color:black;
+  top:100%;
+  margin:0;
+}
+
+
+/*===================================
+main
+=====================================*/
+
+
+
+main{
+  display:block;
+}
+
+@media screen and (min-width: 768px){
+  main{
+    padding-top:60px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  main{
+    padding-top:52px;
+  }
+}
+
+
+
+
+/*===================================
+section1
+=====================================*/
+
+.s1_div1{
+  background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/course-hero-pc.png);
+  padding:70px 0 71px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:1440px;
+  background-color:#f79314;
+}
+
+@media screen and (max-width:767px){
+  .s1_div1{
+  background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/course-hero-sp.png);
+  background-size:contain;
+  padding-top:42px;
+  padding-bottom:90px;
+  }
+}
+
+.s1_d1_div1 h1{
+  padding-left:145px;
+  color:white;
+  font-size:40px;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+
+@media screen and (max-width:767px){
+  .s1_d1_div1 h1{
+    padding-left:0;
+    font-size:22px;
+    text-align:center;
+    line-height:1.3;
+  }
+}
+
+
+
+/*===================================
+section2
+=====================================*/
+.s2{
+  padding:75px 0 80px;
+  background-color:#fcfaf5;
+}
+
+/*-----------content1-----------*/
+.s2_content1{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/*-----------content2-----------*/
+.s2_content2{
+  margin-top:60px;
+}
+
+.s2_c2_p_type1{
+  font-size:16px;
+  text-align:center;
+  line-height:30px;
+  margin-top:30px;
+}
+
+.s2_c2_p_type1 span{
+  display:block;
+}
+
+@media screen and (max-width:767px){
+  .s2_c2_p_type1{
+  font-size:15px;
+  text-align:left;
+}
+
+.s2_c2_p_type1 span{
+  display:inline;
+}
+}
+
+.s2_c2_div_underline{
+  text-align:center;
+  margin-top:24px;
+}
+
+.s2_c2_p_type2{
+  font-size:20px;
+  text-align:center;
+  font-weight:bold;
+  background:linear-gradient(
+  transparent 70%,#fff79d 70%,#fff79d);
+}
+
+.s2_c2_p_type2 br{
+  display:none;
+}
+
+@media screen and (max-width:767px){
+  .s2_c2_p_type2{
+  font-size:16px;
+}
+  .s2_c2_p_type2 br{
+  display:block;
+}
+}
+
+/*-----------content3-----------*/
+.s2_content3{
+  background-color:white;
+  margin-top:100px;
+  padding:40px;
+  border-radius:20px;
+}
+
+.s2_c3_img{
+  width:100px;
+  height:100px;
+  background-color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:-90px auto 0;
+  border-radius:50%;
+}
+
+@media screen and (max-width:767px){
+  .s2_c3_img{
+    width:80px;
+    height:80px;
+    margin-top:-70px;
+  }
+}
+
+.s2_c3_img img{
+  width:40px;
+}
+
+@media screen and (max-width:767px){
+  .s2_c3_img img{
+    width:32px;
+  }
+}
+
+.s2_content3 h3{
+  font-size:30px;
+  text-align:center;
+  margin-top:-20px;
+  line-height:36px;
+}
+
+@media screen and (max-width:767px){
+  .s2_content3 h3{
+    font-size:20px;
+  }
+}
+
+
+.s2_c3_div2{
+  display:flex;
+  justify-content:space-between;
+}
+
+@media screen and (max-width:767px){
+  .s2_c3_div2{
+    flex-direction:column;
+    align-items:center;
+  }
+}
+
+.s2_c3_d2_imglist{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:40px;
+  width:31%;
+}
+
+@media screen and (max-width:767px){
+  .s2_c3_d2_imglist{
+    width:100%;
+    margin-top:36px;
+  }
+}
+
+.s2_c3_d2_imglist h4{
+  font-size:14px;
+  text-align:center;
+  width:100%;
+  color:white;
+  background-color:#222222;
+  border-radius:15px;
+  padding:4px;
+}
+
+@media screen and (max-width:767px){
+  .s2_c3_d2_imglist h4{
+    font-size:15px;
+  }
+}
+
+.s2_c3_d2_imglist img{
+  width:100%;
+  margin-top:16px;
+}
+
+.s2_c3_d2_imglist p{
+  margin-top:16px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+@media screen and (max-width:767px){
+  .s2_c3_d2_imglist p{
+    font-size:15px;
+  }
+}
+
+.s2_c3_d2_imglist p:before{
+  content:'';
+  display:inline-block;
+  width:23px;
+  height:20px;
+  margin-right:10px;
+  background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/icon-finger.png);
+  background-size:100%;
+}
+
+/*-----------content4-----------*/
+.s2_content4{
+  display:flex;
+  justify-content:space-between;
+  margin-top:60px;
+  padding:0 40px;
+}
+
+@media screen and (max-width:767px){
+  .s2_content4{
+    flex-direction:column;
+    padding:0;
+  }
+}
+
+.s2_c4_course{
+  width:48.5%;
+  border-radius:10px;
+  border:1px solid #7070701A;
+  text-align:center;
+}
+
+@media screen and (max-width:767px){
+  .s2_c4_course{
+    width:100%;
+  }
+}
+
+.s2_c4_course1{
+  margin-right:25px;
+}
+
+@media screen and (max-width:767px){
+  .s2_c4_course1{
+    margin-right:0;
+    margin-bottom:60px;
+  }
+}
+
+.s2_c4_course_div1{
+  background-color:#f79314;
+  color:white;
+  padding:18px;
+  border-radius:10px 10px 0 0;
+  font-weight:bold;
+}
+
+
+.s2_c4_course_d1_p1{
+  font-size:14px;
+}
+
+.s2_c4_course_d1_p2{
+  font-size:20px;
+  margin-top:3px;
+}
+
+.s2_c4_course_div2{
+  background-color:fffdfa;
+  padding:18px;
+}
+
+.s2_c4_course_d2_p1{
+  font-size:28px;
+  margin:10px 0 20px;
+  font-weight:bold;
+  font-family:Lato-Black;
+}
+
+.s2_c4_course_d2_p1 span{
+  margin-left:4px;
+  font-size:14px;
+}
+
+.s2_c4_course_d2_p2{
+  font-size:16px;
+  margin-bottom:10px;
+  color:#22222299;
+  font-family:Noto Sans CJK JP;
+  line-height:2em;
+  text-align:left;
+}
+
+.s2_c4_course_div3{
+  background-color:#fff8ea;
+  padding:8px;
+}
+
+.s2_c4_course_div3 p{
+  font-size:16px;
+  font-weight:bold;
+}
+
+.s2_c4_course_div3 span{
+  font-size:30px;
+  font-family:Lato-Black;
+}
+
+.s2_c4_course_div4,
+.s2_c4_course_div6{
+  padding:18px;
+  background-color:#fffdfa;
+}
+
+.s2_c4_course_div4 p,
+.s2_c4_course_div5 p,
+.s2_c4_course_div6 p{
+  font-size:14px;
+}
+
+.s2_c4_course_div4 span,
+.s2_c4_course_div5 span,
+.s2_c4_course_div6 span{
+  font-size:14px;
+  margin-left:5px;
+  color:#f79214;
+}
+
+.s2_c4_course_div5,
+.s2_c4_course_div7{
+  padding:18px;
+  background-color:#fff8ea;
+}
+
+.s2_c4_course_div7 a{
+  color:#f79214;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.s2_c4_course_div7 a::before{
+  content:'\203A';
+  display:inline-block;
+  transform:rotate(90deg);
+  margin-right:10px;
+  font-weight:bold;
+}
+
+
+
+/*===================================
+section3
+=====================================*/
+.s3{
+  padding:75px 0 80px;
+}
+
+/*-----------content1-----------*/
+.s3_content1{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/*-----------content2&3-----------*/
+.s3_course{
+  background-color:#fcfaf5;
+  margin-top:60px;
+  padding:40px;
+  border-radius:20px;
+}
+
+.s3_course > p{
+  font-size:15px;
+  margin-bottom:4px;
+  text-align:center;
+  line-height:26px;
+  font-weight:bold;
+}
+
+.s3_course h3{
+  margin:0 auto;
+  line-height:1;
+  text-align:center;
+  font-size:36px;
+  background:-webkit-linear-gradient(-40deg,#f79214,#f74e06);
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;
+}
+
+@media screen and (max-width:767px){
+  .s3_course h3{
+    font-size:24px;
+    line-height:27px;
+  }
+}
+
+.s3_c_div1,
+.s3_c_div2,
+.s3_c_div3{
+  background-color:white;
+  border-radius:10px;
+  margin-top:40px;
+  padding:16px 20px 20px;
+}
+
+@media screen and (max-width:767px){
+  .s3_c_div1,
+  .s3_c_div2,
+  .s3_c_div3{
+    margin-top:20px;
+  }
+}
+
+.s3_c_div1 h4,
+.s3_c_div2 h4,
+.s3_c_div3 h4{
+  font-size:20px;
+  margin-bottom:8px;
+  font-weight:bold;
+  letter-spacing:26;
+}
+
+@media screen and (max-width:767px){
+  .s3_c_div1 h4,
+  .s3_c_div2 h4,
+  .s3_c_div3 h4{
+    text-align:center;
+    margin-bottom:10px;
+  }
+}
+
+.s3_c_div1 h4::before,
+.s3_c_div2 h4::before,
+.s3_c_div3 h4::before{
+  content:'';
+  display:inline-block;
+  background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/icon-point.png);
+  margin-right:8px;
+  margin-top:3px;
+  width:20px;
+  height:20px;
+  background-size:100%;
+}
+
+.s3_c_div1 p{
+  font-size:16px;
+  line-height:26px;
+  padding-left:8px;
+}
+
+@media screen and (max-width:767px){
+  .s3_c_div1 p{
+    font-size:15px;
+    padding-left:0;
+    line-height:22px;
+  }
+}
+
+.s3_c_div1 p::before{
+  content:'';
+  display:inline-block;
+  margin-top:3px;
+  margin-right:10px;
+  background-color:#f79314;
+  border-radius:50%;
+  min-width:8px;
+  height:8px;
+}
+
+.s3_c_dl dt{
+  width:90px;
+  background-color:#fcfaf5;
+  border-radius:15px;
+  color:#f79214;
+  font-size:16px;
+  font-weight:bold;
+  margin-top:20px;
+  padding:4px 26px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.s3_c_dl dt::before{
+  content:'';
+  display:inline-block;
+  width:17px;
+  height:17px;
+  background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/icon-pencil.png);
+  background-size:100%;
+  margin-top:2px;
+  margin-right:6px;
+}
+
+.s3_c_dl dd{
+  font-size:16px;
+  margin-top:20px;
+  padding-left:16px;
+  line-height:18px;
+}
+
+.s3_c_dl p{
+  line-height:1.5;
+}
+
+@media screen and (max-width:767px){
+  .s3_c_dl{
+    text-align:center;
+  }
+}
+
+.s3_c_d3_curriculum{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  align-content:flex-start;
+  margin-top:28px;
+}
+
+@media screen and (max-width:767px){
+  .s3_c_d3_curriculum{
+    margin-top:17px;
+  }
+}
+
+.curriculum_content{
+  width:49%;
+}
+
+@media screen and (max-width:767px){
+  .curriculum_content{
+    width:100%;
+  }
+}
+
+.curriculum_content img{
+  width:100%;
+}
+
+.curriculum_content_p1{
+  font-size:20px;
+  margin-bottom:4px;
+  font-weight:bold;
+}
+
+.curriculum_content_p2{
+  font-size:16px;
+}
+
+.curriculum_content div{
+  padding:13px 8px 18px;
+}
+
+@media screen and (max-width:767px){
+  .curriculum_content div{
+    padding:13px 8px 30px;
+  }
+}
+
+/*-----------content3-----------*/
+.s3_c_skip{
+  display:flex;
+  background-color:white;
+  margin-top:60px;
+  padding:20px;
+  justify-content:space-between;
+  border-radius:10px;
+}
+
+@media screen and (max-width:767px){
+  .s3_c_skip{
+    flex-direction:column;
+    align-items:center;
+  }
+}
+
+.s3_c_skip_div1{
+  width:90px;
+  height:90px;
+  min-width:90px;
+  margin-right:20px;
+}
+
+@media screen and (max-width:767px){
+  .s3_c_skip_div1{
+    max-width:130px;
+    margin-right:0;
+  }
+}
+
+.s3_c_skip_div1 img{
+  width:100%;
+}
+
+.s3_c_skip_div2 h4{
+  margin-bottom:8px;
+  font-size:20px;
+  font-weight:bold;
+  line-height:26px;
+}
+
+.s3_c_skip_div2 br{
+  display:none;
+}
+
+@media screen and (max-width:767px){
+  .s3_c_skip_div2 h4{
+    margin:14px 0;
+    text-align:center;
+  }
+  .s3_c_skip_div2 br{
+  display:block;
+}
+}
+
+.s3_c_skip_div2 p{
+  font-size:16px;
+}
+
+.s3_c_skip_div2 span{
+  color:#f79214;
+}
+
+
+
+/*===================================
+section4
+=====================================*/
+.s4{
+  padding:40px 0 120px;
+  background-color:#f6f6f6;
+}
+
+.s4_content1{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.s4 > .content_width{
+  background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/bg-section-top-course.png);
+  background-size:281px 275px;
+  background-repeat:no-repeat;
+  background-position:calc(100% - 50px) top;
+  padding-top:35px;
+}
+
+.s4_content2{
+  display:flex;
+  justify-content:space-between;
+  margin-top:60px;
+}
+
+.s4_c2_div{
+  padding:0 20px;
+  width:calc(100% / 3);
+}
+
+@media screen and (max-width:767px){
+  .s4_content2{
+    flex-wrap:wrap;
+    align-content:flex-start;
+  }
+
+  .s4_c2_div{
+    width:100%;
+  }
+}
+
+@media screen and (max-width:767px){
+  .s4_content2 > div + div{
+    margin-top:30px;
+  }
+}
+
+
+.s4_c2_div a{
+  text-decoration:none;
+}
+
+.s4_c2_div div{
+  border-radius:10px;
+  overflow:hidden;
+  position:relative;
+  padding-top:calc((190/320) * 100%);
+}
+
+.s4_c2_div img{
+  width:100%;
+  height:145%;
+  position:absolute;
+  top:0;
+  left:0;
+  object-fit:cover;
+  transition:transform 0.2s;
+}
+
+.s4_c2_div p{
+  color:#222222;
+  margin-top:15px;
+  font-size:16px;
+}
+
+@media screen and (min-width:768px){
+  .s4_c2_div:hover img{
+    transform:scale(1.1);
+  }
+
+  .s4_c2_div:hover p{
+    color:#f79314;
+  }
+}
+
+
+/*===================================
+footer
+=====================================*/
+.footer{
+  background-color:#f79314;
+  color:white;
+  padding:80px 0 40px;
+}
+
+.footer1{
+  position:relative;
+  display:flex;
+  justify-content:space-between;
+}
+
+@media screen and (max-width:767px){
+  .footer1{
+    display:flex;
+    flex-direction:column;
+  }
+}
+
+.f1_d1_a1{
+  max-width:280px;
+  display:inline-block;
+}
+
+.f1_d1_a1 img{
+  width:100%;
+}
+
+.f1_d1_p1{
+  margin-top:25px;
+  font-size:16px;
+}
+
+.f1_d1_p2{
+  margin-top:10px;
+  font-size:16px;
+}
+
+.f1_d1_div1{
+  margin-top:35px;
+}
+
+.f1_d1_d1_a{
+  max-width:60px;
+  display:inline-block;
+  margin-right:15px;
+}
+
+.f1_d1_d1_a img{
+  width:100%;
+}
+
+@media screen and (max-width:767px){
+  .f1_div1{
+    order:3;
+    text-align:center;
+    margin-top:30px;
+    padding-top:30px;
+    border-top:solid 1px white;
+  }
+  .f1_div2{
+    order:1;
+    margin:0 0 0 20px;
+  }
+  .f1_div3{
+    order:2;
+  }
+}
+
+.f1_d2_ul{
+  list-style:none;
+}
+
+.f1_d2_ul > li + li{
+  margin-top:30px;
+}
+
+.f1_d2_li_a{
+  text-decoration:none;
+}
+
+.f1_d2_li_p{
+  font-size:16px;
+  color:white;
+}
+
+.f1_d2_li_p span{
+  color:white;
+  font-weight:bold;
+  margin-right:16px;
+}
+
+.f1_div3{
+  align-self:flex-end;
+}
+
+@media screen and (max-width:767px){
+  .f1_div3{
+  align-self:center;
+  margin-top:50px;
+ }
+}
+
+.f1_div3 img{
+  height:70px;
+  width:auto;
+}
+
+.f1_d4_a{
+  position:absolute;
+  top:-105px;
+  right:50px;
+  width:50px;
+  height:50px;
+  background-color:white;
+  border-radius:50%;
+  box-shadow:0 12px 30px -15px;
+  transition:0.2s;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.f1_d4_a:hover{
+  background-color:#f79214;
+}
+
+.f1_d4_a p{
+  height:10px;
+  width:10px;
+  border-left:solid 3px #f79214;
+  border-top:solid 3px #f79214;
+  transform:rotate(45deg);
+}
+
+.f1_d4_a:hover p{
+  border-left:solid 3px white;
+  border-top:solid 3px white;
+}
+
+.footer2{
+  margin-top:60px;
+}
+
+.footer2 p{
+  font-size:12px;
+}
+
+@media screen and (max-width:767px){
+  .footer2{
+    text-align:center;
+  }
+}
+
